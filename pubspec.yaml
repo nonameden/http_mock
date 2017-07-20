@@ -1,0 +1,12 @@
+name: http_mock
+version: 1.0.0
+description: A package:http client that can mock server responses.
+author: Tobe O <thosakwe@gmail.com>
+homepage: https://github.com/thosakwe/http_mock
+environment:
+  sdk: ">=1.19.0"
+dependencies:
+  angel_route: ^1.0.0
+  http: ^0.11.3
+dev_dependencies:
+  test: ^0.12.0
