@@ -1,6 +1,6 @@
 # http_mock
-[![Pub](https://img.shields.io/pub/v/http_mockr.svg)](https://pub.dartlang.org/packages/http_mockr)
-[![build status](https://travis-ci.org/thosakwe/http_mockr.svg)](https://travis-ci.org/thosakwe/http_mockr)
+[![Pub](https://img.shields.io/pub/v/http_mock.svg)](https://pub.dartlang.org/packages/http_mock)
+[![build status](https://travis-ci.org/thosakwe/http_mock.svg)](https://travis-ci.org/thosakwe/http_mock)
 
 A package:http client that can mock server responses.
 
