@@ -14,10 +14,16 @@ class MockClient extends BaseClient {
     var resolved = router.resolveAll(request.url.path, request.url.path,
         method: request.method);
     var pipeline = new MiddlewarePipeline(resolved);
-    var params = resolved.fold<Map>({}, (out, r) => out..addAll(r.allParams));
+    var params = resolved
+        .fold<Map<String, dynamic>>({}, (out, r) => out..addAll(r.allParams));
 
-    var req = new MockHttpContextRequest._(request.method, request.url,
-        request.headers, params, request.finalize());
+    var req = new MockHttpContextRequest._(
+      request.method,
+      request.url,
+      request.headers,
+      params,
+      request.finalize(),
+    );
     var res = new MockHttpContextResponse._();
     var ctx = new _MockHttpContextImpl(req, res);
 
@@ -75,7 +81,7 @@ class _MockHttpContextImpl implements MockHttpContext {
 class MockHttpContextRequest {
   final String method;
   final Uri url;
-  final Map<String, String> headers, params;
+  final Map<String, dynamic> headers, params;
   final Stream<List<int>> body;
   final Map<String, dynamic> properties = {};
 
