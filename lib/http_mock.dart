@@ -47,7 +47,7 @@ class MockClient extends BaseClient {
       if (result != null && !res._closed) {
         res
           ..headers['content-type'] = 'application/json'
-          ..write(JSON.encode(result));
+          ..write(json.encode(result));
       }
 
       if (!res._closed) res.close();
@@ -111,7 +111,7 @@ class MockHttpContextResponse
 
   @override
   void write(Object obj) {
-    _body.add(UTF8.encode(obj.toString()));
+    _body.add(utf8.encode(obj.toString()));
   }
 
   @override
